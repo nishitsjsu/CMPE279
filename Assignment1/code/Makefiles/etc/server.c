@@ -7,7 +7,7 @@
 #include <string.h> 
 #include <sys/wait.h>
 #include <sys/user.h>
-#define PORT 8080 
+#define PORT 80
 int main(int argc, char const *argv[]) 
 { 
     int server_fd, new_socket, valread; 
@@ -73,7 +73,8 @@ int main(int argc, char const *argv[])
 	    printf("%s\n",buffer );  
 	    // kill(pid, SIGKILL);
     } else if(pid > 0){
-    	sleep(2);
+    	//sleep(2);
+	wait(NULL); // wait for child process to terminate
     	printf("control is with parent now\n");
 	    send(new_socket , hello , strlen(hello) , 0 ); 
 		printf("Hello message sent\n");
