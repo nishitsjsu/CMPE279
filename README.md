@@ -1,1 +1,3 @@
-# CMPE279_Assignment1
+# CMPE279
+
+## Assignments for CMPE279 class
